@@ -23,7 +23,7 @@ module.exports = (env) => {
  
   app.get('/health', healthController);//GET
 
-  app.post('/auth/login', schemaValidatorMiddleware('login'), loginController);//POST
+  app.post('/auth/login', schemaValidatorMiddleware('login'), loginController(env));//POST
 
   app.post('/auth/signup', schemaValidatorMiddleware('signup'), signupController);//POST
 

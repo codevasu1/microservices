@@ -8,7 +8,7 @@ const Server = require('./loaders/server');
         const server = Server(env);
 
         server.listen(env.server.port, () => {
-          console.log(`server runnig on port ${env.server.port}`);
+          console.log(`server running on port: ${env.server.port}`);
         })
 
     }catch(err){
